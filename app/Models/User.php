@@ -45,4 +45,9 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+    public function smtpAccounts()
+{
+    return $this->hasMany(\App\Models\SmtpAccount::class);
+}
+
 }
